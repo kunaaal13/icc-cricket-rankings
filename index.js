@@ -5,11 +5,11 @@ const { t20Routes } = require('./routes/t20.js');
 const { testRoutes } = require('./routes/test.js');
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+// const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json());
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+app.listen(process.env.PORT || 8000, () => {
+  console.log(`Server is listening on port`);
 });
 
 app.get('/', (req, res) => {
