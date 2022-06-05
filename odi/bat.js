@@ -12,4 +12,4 @@ const getOdiBat = async () => {
 
 module.exports = {
   getOdiBat,
-}
+};

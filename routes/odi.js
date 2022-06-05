@@ -13,16 +13,19 @@ router.get('/', (req, res) => {
 router.get('/bat', async function (req, res) {
   await getOdiBat();
   res.json(results);
+  results.length = 0;
 });
 
 router.get('/bowl', async function (req, res) {
   await getOdiBowl();
   res.json(results);
+  results.length = 0;
 });
 
 router.get('/allrounder', async function (req, res) {
   await getOdiAll();
   res.json(results);
+  results.length = 0;
 });
 
 module.exports = {

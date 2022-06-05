@@ -14,16 +14,19 @@ router.get('/', (req, res) => {
 router.get('/bat', async function (req, res) {
   await getT20Bat();
   res.json(results);
+  results.length = 0;
 });
 
 router.get('/bowl', async function (req, res) {
   await getT20Bowl();
   res.json(results);
+  results.length = 0;
 });
 
 router.get('/allrounder', async function (req, res) {
   await getT20All();
   res.json(results);
+  results.length = 0;
 });
 
 module.exports = {

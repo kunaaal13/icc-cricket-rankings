@@ -25,7 +25,7 @@ async function getFirstEntry(html) {
   results.push({ ranking, name, nationality, rating });
 }
 
-async function getRestEntry(html, result) {
+async function getRestEntry(html) {
   let $ = cheerio.load(html);
 
   let rows = $('tr.table-body');
@@ -46,6 +46,6 @@ async function getRestEntry(html, result) {
 }
 
 module.exports = {
-  results,
   extractLinks,
+  results,
 };
